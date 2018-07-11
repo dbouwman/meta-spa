@@ -14,6 +14,7 @@ app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 // static assets that need to be served one level up from the exb
 app.use('/', express.static('apps/exb'))
+app.use('/assets', express.static('apps/exb/assets'))
 app.use('/js', express.static('apps/exb'))
 
 app.get('/', function(req, res) {
