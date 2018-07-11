@@ -17,7 +17,8 @@ app.use('/', express.static('apps/exb'));
 app.use('/js', express.static('apps/exb'));
 
 app.get('/', function(req, res) {
-  res.redirect(301, 'https://radar-app.now.sh/exb?id=8261ae335d2044eb9837cb858847c692');
+  res.render('root');
+  // res.redirect(301, 'https://radar-app.now.sh/exb?id=8261ae335d2044eb9837cb858847c692');
 })
 
 // now the route to handle the exb index file...
