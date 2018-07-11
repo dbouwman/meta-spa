@@ -25,9 +25,9 @@ app.get('/exb', function(req, res){
     portal: 'https://www.arcgis.com/sharing/rest'
   };
   // if there is an appId ...
-  if (req.query.appId) {
+  if (req.query.id) {
     // fetch the item...
-    Items.getItem(req.query.appId, reqOpts)
+    Items.getItem(req.query.id, reqOpts)
     .then((item) => {
       // construct the url to the thumbnail
       item.thumbnailImageUrl = `${reqOpts.portal}/content/items/${item.id}/info/${item.thumbnail}`;
