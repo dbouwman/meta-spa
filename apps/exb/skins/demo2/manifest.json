@@ -1,0 +1,12 @@
+{
+  "name": "demo2",
+  "type": "theme",
+  "thumbnails": [],
+  "version": "0.1",
+  "jimuVersion": "0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is a simple version of a skin.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "mainColor": "#4A90E2"
+}

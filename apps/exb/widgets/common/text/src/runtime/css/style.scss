@@ -1,0 +1,21 @@
+.widget-text {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    .overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .is-in-builder {
+        width: 100%;
+        height: 100%;
+        .editor-root {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+    }
+}

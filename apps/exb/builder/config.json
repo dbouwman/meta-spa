@@ -1,0 +1,433 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout-detail",
+      "widgets": [
+        "header",
+        "widget-setting",
+        "app-loader",
+        "preview-switcher",
+        "builder-entry",
+        "data-source-config",
+        "setting-navigator",
+        "page-setting",
+        "general-setting"
+      ]
+    },
+    "home": {
+      "id": "home",
+      "label": "page home",
+      "layout": "layout-home",
+      "widgets": [
+        "app-list"
+      ]
+    },
+    "create": {
+      "id": "create",
+      "label": "create app",
+      "layout": "layout-create-app",
+      "widgets": [
+        "create-app"
+      ]
+    },
+    "template": {
+      "id": "template",
+      "label": "choose template",
+      "layout": "layout-template",
+      "widgets": [
+        "choose-template"
+      ]
+    }
+  },
+  "widgets": {
+    "header": {
+      "id": "header",
+      "uri": "builderWidgets/header"
+    },
+    "choose-template": {
+      "id": "choose-template",
+      "uri": "builderWidgets/choose-template"
+    },
+    "setting-navigator": {
+      "id": "setting-navigator",
+      "uri": "builderWidgets/setting-navigator"
+    },
+    "page-setting": {
+      "id": "page-setting",
+      "uri": "builderWidgets/page-setting"
+    },
+    "general-setting": {
+      "id": "general-setting",
+      "uri": "builderWidgets/general-setting"
+    },
+    "widget-setting": {
+      "id": "widget-setting",
+      "uri": "builderWidgets/widget-setting"
+    },
+    "app-loader": {
+      "id": "app-loader",
+      "uri": "builderWidgets/app-loader"
+    },
+    "preview-switcher": {
+      "id": "preview-switcher",
+      "uri": "builderWidgets/preview-switcher"
+    },
+    "builder-entry": {
+      "id": "builder-entry",
+      "uri": "builderWidgets/builder-entry"
+    },
+    "data-source-config": {
+      "id": "data-source-config",
+      "uri": "builderWidgets/data-source-config"
+    },
+    "create-app": {
+      "id": "create-app",
+      "uri": "builderWidgets/create-app"
+    },
+    "app-list": {
+      "id": "app-list",
+      "uri": "builderWidgets/app-list"
+    },
+    "toc": {
+      "id": "toc",
+      "uri": "builderWidgets/toc"
+    }
+  },
+  "sections": {
+    "right-section": {
+      "id": "right-section",
+      "views": ["general-setting-view", "page-setting-view", "widget-setting-view"]
+    }
+  },
+  "views": {
+    "widget-setting-view": {
+      "id": "widget-setting-view",
+      "layout": "widget-setting-view-layout",
+      "widgets": ["widget-setting"]
+    },
+    "page-setting-view": {
+      "id": "page-setting-view",
+      "layout": "page-setting-view-layout",
+      "widgets": ["widget-setting"]
+    },
+    "general-setting-view": {
+      "id": "general-setting-view",
+      "layout": "general-setting-view-layout",
+      "widgets": ["widget-setting"]
+    }
+  },
+  "layouts": {
+    "layout-detail": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "sidebar",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 60
+        },
+        "setting": {
+          "attach": "top",
+          "togglable": false,
+          "resizable": false
+        },
+        "type": "widget",
+        "widgetId": "header"
+      },
+      "2": {
+        "id": "2",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 80
+        },
+        "setting": {
+          "attach": "right",
+          "togglable": false,
+          "resizable": false,
+          "max": 100
+        },
+        "type": "widget",
+        "widgetId": "setting-navigator"
+      },
+      "3": {
+        "id": "3",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "sidebar",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "4": {
+        "id": "4",
+        "parentId": "3",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 200,
+          "h": 100
+        },
+        "setting": {
+          "attach": "left",
+          "togglable": true,
+          "resizable": false,
+          "heightInPixel": false,
+          "max": 200,
+          "className": "scrollable"
+        },
+        "type": "widget",
+        "widgetId": "toc"
+      },
+      "5": {
+        "id": "5",
+        "parentId": "3",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 80
+        },
+        "setting": {
+          "attach": "right",
+          "togglable": true,
+          "resizable": false,
+          "max": 200
+        },
+        "type": "section",
+        "sectionId": "right-section"
+      },
+      "6": {
+        "id": "6",
+        "parentId": "3",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "widget",
+        "widgetId": "app-loader"
+      }
+    },
+    "layout-home": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 1000
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 20,
+          "w": null,
+          "h": 800
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "app-list"
+      }
+    },
+    "layout-template": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": null
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "choose-template"
+      }
+    },
+    "layout-create-app": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": null
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "create-app"
+      }
+    },
+    "widget-setting-view-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": null
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "widget-setting"
+      }
+    },
+    "page-setting-view-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": null
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "page-setting"
+      }
+    },
+    "general-setting-view-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": null
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "general-setting"
+      }
+    }
+  },
+  "skin": "builder",
+  "attributes": {
+    "title": "builder"
+  }
+}

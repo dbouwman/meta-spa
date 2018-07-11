@@ -1,0 +1,184 @@
+{
+  "skin": "radar",
+  "attributes": {
+    "portalUrl": "http://esridevbeijing.maps.arcgis.com"
+  },
+
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout1",
+      "widgets": [
+        "text1",
+        "arcgis-scene",
+        "feature-list"
+      ]
+    }
+  },
+  "layouts": {
+    "layout1": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2
+        },
+        "type": "widget",
+        "widgetId": "text1"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 2,
+          "y": 2,
+          "w": 8,
+          "h": 20
+        },
+        "id": "2",
+        "type": "widget",
+        "widgetId": "arcgis-scene"
+      },
+      "3": {
+        "id": "3",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 2,
+          "w": 2,
+          "h": 20
+        },
+        "type": "widget",
+        "widgetId": "feature-list"
+      },
+      "4": {
+        "parentId": "0",
+        "pos": {
+          "x": 11,
+          "y": 3,
+          "w": 2,
+          "h": 20
+        },
+        "id": "4",
+        "type": "widget",
+        "widgetId": "feature-info"
+      }
+    }
+  },
+  "widgets": {
+    "text1": {
+      "id": "text1",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "This is the [text string] in text widget"
+      }
+    },
+    "arcgis-scene": {
+      "id": "arcgis-scene",
+      "uri": "widgets/arcgis/arcgis-scene/",
+      "useDataSources": ["ds-1"],
+      "outputDataSources": ["arcgis-scene"],
+      "config": {
+        "canZoom": false,
+        "canGoHome": true,
+        "canLocate": true,
+        "canNavigate": true,
+        "canCompass": true
+      }
+    },
+    "arcgis-map": {
+      "id": "arcgis-map",
+      "uri": "widgets/arcgis/arcgis-map/",
+      "useDataSources": ["ds-2"],
+      "outputDataSources": ["arcgis-map"],
+      "config": {
+        "canZoom": true,
+        "canScale": true,
+        "canGoHome": true,
+        "canGoExtent": true,
+        "canOverviewMap": false,
+        "canLocate": true
+      }
+    },
+    "feature-list": {
+      "id": "feature-list",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": ["arcgis-scene"],
+      "config": {
+        "dataSourceId": "arcgis-scene",
+        "layerId": "1641b76d6b5-layer-0",
+        "titleField": "NAME",
+        "descriptionField": "TEXT_FOR_DESCRIPTION",
+        "imageField": "THUMB_URL",
+        "limit": 15
+      }
+    },
+    "feature-info": {
+      "id": "feature-info",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-scene"],
+      "config": {
+        "dataSourceId": "arcgis-scene",
+        "layerId": "1641b76d6b5-layer-0",
+        "image": {
+          "field": "PIC_URL",
+          "height": 225
+        },
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "DESCRIPTION"
+        }
+      }
+    }
+  },
+
+  "dataSources": {
+    "ds-1": {
+      "id": "ds-1",
+      "label": "ds 1",
+      "type": "WEB_SCENE",
+      "itemId": "24913e3cf7314311ba9f9d90ccc66388"
+    },
+    "ds-2": {
+      "id": "ds-2",
+      "label": "test web map",
+      "type": "WEB_MAP",
+      "itemId": "aedb8657cf6c414e91728c73b3743253"
+    },
+    "arcgis-scene": {
+      "id": "arcgis-scene",
+      "label": "test arcgis scene output datasource",
+      "type": "WEB_SCENE_VIEW"
+    },
+    "arcgis-map": {
+      "id": "arcgis-map",
+      "label": "test arcgis map output datasource",
+      "type": "WEB_MAP_VIEW"
+    },
+    "feature-layer": {
+      "id": "fl1",
+      "label": "test feature layer data source",
+      "type": "FEATURE_LAYER",
+      "url": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0"
+    }
+  }
+}

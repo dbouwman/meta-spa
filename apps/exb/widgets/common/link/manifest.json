@@ -1,0 +1,14 @@
+{
+  "name": "link",
+  "type": "widget",
+  "version": "0.0.1",
+  "jimuVersion": "0.0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is a link widget, which is represented as a UI element, like an icon, text, or the composition.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasLocale": false,
+    "hasSettingPage": false
+  }
+}

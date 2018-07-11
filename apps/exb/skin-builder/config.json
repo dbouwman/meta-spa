@@ -1,0 +1,83 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout1",
+      "widgets": [
+        "header",
+        "palette",
+        "preview-loader"
+      ]
+    }
+  },
+  "widgets": {
+    "header": {
+      "id": "header",
+      "uri": "skin-builder/widgets/header/"
+    },
+    "palette": {
+      "id": "palette",
+      "uri": "skin-builder/widgets/palette/"
+    },
+    "preview-loader": {
+      "id": "preview-loader",
+      "uri": "skin-builder/widgets/preview-loader/"
+    }
+  },
+  "layouts": {
+    "layout1": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 2
+        },
+        "id": "1",
+        "type": "widget",
+        "widgetId": "header"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 2,
+          "w": 3,
+          "h": 40
+        },
+        "id": "2",
+        "type": "widget",
+        "widgetId": "palette"
+      },
+      "3": {
+        "parentId": "0",
+        "pos": {
+          "x": 3,
+          "y": 2,
+          "w": 9,
+          "h": null
+        },
+        "id": "3",
+        "type": "widget",
+        "widgetId": "preview-loader"
+      }
+    }
+  },
+  "skin": "demo"
+}

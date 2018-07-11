@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="22px" viewBox="0 0 30 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/images</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.7">
+        <g id="spec" transform="translate(-1081.000000, -506.000000)" fill="#000000">
+            <g id="icons/images" transform="translate(1081.000000, 506.000000)">
+                <path d="M30,19.0909091 L30,2.72727273 C30,1.22727273 28.7727273,0 27.2727273,0 L2.72727273,0 C1.22727273,0 0,1.22727273 0,2.72727273 L0,19.0909091 C0,20.5909091 1.22727273,21.8181818 2.72727273,21.8181818 L27.2727273,21.8181818 C28.7727273,21.8181818 30,20.5909091 30,19.0909091 L30,19.0909091 Z M10.2272727,11.5909091 L13.6363636,15.6818182 L18.4090909,9.54545455 L24.5454545,17.7272727 L5.45454545,17.7272727 L10.2272727,11.5909091 L10.2272727,11.5909091 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

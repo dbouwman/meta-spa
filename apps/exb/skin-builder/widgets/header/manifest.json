@@ -1,0 +1,10 @@
+{
+  "name": "header",
+  "type": "widget",
+  "version": "0.0.1",
+  "jimuVersion": "0.0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the header widget used in the skin builder.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}

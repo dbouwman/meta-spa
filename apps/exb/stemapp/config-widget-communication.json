@@ -1,0 +1,98 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout1",
+      "widgets": [
+        "pub",
+        "sub"
+      ]
+    }
+  },
+  "widgets": {
+    "pub": {
+      "id": "pub",
+      "uri": "widgets/samples/widget-communication/publish-widget"
+    },
+    "sub": {
+      "id": "sub",
+      "uri": "widgets/samples/widget-communication/subscribe-widget",
+      "useDataSources": [
+        "ds-1"
+      ]
+    }
+  },
+  "layouts": {
+    "layout1": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 40,
+          "h": 25
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "pub"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 60,
+          "y": 0,
+          "w": 40,
+          "h": 40
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "sub"
+      }
+    }
+  },
+  "skin": "demo",
+  "messages": [
+    {
+      "widgetId": "pub",
+      "messageType": "STRING_SELECTION_CHANGE",
+      "actions": [
+        {
+          "description": "query by state",
+          "widgetId": "sub",
+          "actionName": "query",
+          "config": {
+            "fieldName": "st"
+          }
+        }
+      ]
+    }
+  ],
+  "dataSources": {
+    "ds-1": {
+      "id": "ds-1",
+      "label": "ds 1",
+      "type": "FEATURE_LAYER",
+      "url": "http://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0"
+    }
+  }
+}

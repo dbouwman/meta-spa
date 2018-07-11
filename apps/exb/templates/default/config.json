@@ -1,0 +1,73 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "default-layout",
+      "widgets": [
+        "text1"
+      ]
+    }
+  },
+  "widgets": {
+    "text1": {
+      "id": "text1",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "<p><span>This is the default app template</span></p>"
+      }
+    }
+  },
+  "layouts": {
+    "default-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 100,
+          "y": 0,
+          "w": 1000,
+          "h": 1000
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 100,
+          "w": null,
+          "h": 40
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text1"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 200,
+          "w": null,
+          "h": 200
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget"
+      }
+    }
+  },
+  "skin": "demo",
+  "attributes": {
+    "title": "Default Template",
+    "subTitle": "With ExB for ArcGis",
+    "logo": "../stemapp/assets/img/Logo2.png"
+  }
+}

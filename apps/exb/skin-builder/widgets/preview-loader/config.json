@@ -1,0 +1,3 @@
+{
+  "libraries": ["bootstrap", "jimu-ui", "jimu-ui-for-builder", "icons"]
+}

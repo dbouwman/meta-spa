@@ -1,0 +1,272 @@
+{
+  "skin": "demo",
+  "attributes": {
+    "portalUrl": "http://esridevbeijing.maps.arcgis.com"
+  },
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout1",
+      "widgets": [
+        "text1",
+        "arcgis-map",
+        "feature-list",
+        "arcgis-scene"
+      ]
+    }
+  },
+  "layouts": {
+    "layout1": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 3,
+          "w": null,
+          "h": 5
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text1"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 3,
+          "y": 15,
+          "w": 30,
+          "h": 30
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "arcgis-map"
+      },
+      "3": {
+        "parentId": "0",
+        "pos": {
+          "x": 36,
+          "y": 15,
+          "w": 30,
+          "h": 30
+        },
+        "id": "3",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-list"
+      },
+      "4": {
+        "parentId": "0",
+        "pos": {
+          "x": 3,
+          "y": 50,
+          "w": 30,
+          "h": 30
+        },
+        "id": "4",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "arcgis-scene"
+      },
+      "5": {
+        "parentId": "0",
+        "pos": {
+          "x": 36,
+          "y": 50,
+          "w": 30,
+          "h": 30
+        },
+        "id": "5",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-list2"
+      },
+      "6": {
+        "parentId": "0",
+        "pos": {
+          "x": 69,
+          "y": 50,
+          "w": 30,
+          "h": 30
+        },
+        "id": "6",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-info"
+      }
+    }
+  },
+  "widgets": {
+    "text1": {
+      "id": "text1",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "This is the [text string] in text widget"
+      }
+    },
+    "arcgis-map": {
+      "id": "arcgis-map",
+      "uri": "widgets/arcgis/arcgis-map/",
+      "useDataSources": [
+        "ds-3"
+      ],
+      "config": {
+        "extent": {
+          "xmin": -9177882,
+          "ymin": 4246761,
+          "xmax": -9176720,
+          "ymax": 4247967,
+          "spatialReference": {
+            "wkid": 102100
+          }
+        },
+        "canZoom": true,
+        "canScale": true,
+        "canGoHome": true,
+        "canGoExtent": true,
+        "canOverviewMap": true,
+        "canLocate": true
+      }
+    },
+    "feature-list": {
+      "id": "feature-list",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": [
+        "ds-2"
+      ],
+      "config": {
+        "dataSourceId": "ds-2",
+        "titleField": "ST"
+      }
+    },
+    "arcgis-scene": {
+      "id": "arcgis-scene",
+      "uri": "widgets/arcgis/arcgis-scene/",
+      "useDataSources": [
+        "ds-4"
+      ],
+      "config": {
+        "canZoom": false,
+        "canGoHome": true,
+        "canLocate": true,
+        "canNavigate": true,
+        "canCompass": true
+      }
+    },
+    "feature-list2": {
+      "id": "feature-list2",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": [
+        "ds-5"
+      ],
+      "config": {
+        "dataSourceId": "ds-5",
+        "titleField": "name",
+        "descriptionField": "description",
+        "imageField": "thumb_url"
+      }
+    },
+    "feature-info": {
+      "id": "feature-info",
+      "uri": "widgets/arcgis/feature-info/",
+      "config": {
+        "image": {
+          "field": "pic_url",
+          "height": 225
+        },
+        "title": {
+          "field": "name"
+        },
+        "description": {
+          "field": "description"
+        }
+      }
+    }
+  },
+  "dataSources": {
+    "ds-1": {
+      "id": "ds-1",
+      "label": "ds 1",
+      "type": "WEB_MAP",
+      "itemId": "141f8f1a43a8405993e08264836a207b"
+    },
+    "ds-2": {
+      "id": "ds-2",
+      "label": "ds 2",
+      "type": "FEATURE_LAYER",
+      "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Accidental_Deaths/FeatureServer/0"
+    },
+    "ds-3": {
+      "id": "ds-3",
+      "label": "ds 3",
+      "type": "WEB_MAP",
+      "itemId": "e691172598f04ea8881cd2a4adaa45ba"
+    },
+    "ds-4": {
+      "id": "ds-4",
+      "label": "ds 4",
+      "type": "WEB_SCENE",
+      "itemId": "24913e3cf7314311ba9f9d90ccc66388"
+    },
+    "ds-5": {
+      "id": "ds-5",
+      "label": "ds 5",
+      "type": "FEATURE_LAYER",
+      "url": "https://services1.arcgis.com/SXlSqsMsFxtSuzjx/arcgis/rest/services/Mt_Juliet_Pictures/FeatureServer/0/"
+    }
+  },
+  "messages": [{
+    "widgetId": "feature-list",
+    "messageType": "FEATURE_SELECTION_CHANGE",
+    "actions": [{
+      "description": "feature select",
+      "widgetId": "arcgis-map",
+      "actionName": "feature-select",
+      "config": {
+        "targetLayerId": "Accidental_Deaths_8938"
+      }
+    }]
+  }, {
+    "widgetId": "feature-list2",
+    "messageType": "FEATURE_SELECTION_CHANGE",
+    "actions": [{
+      "description": "feature select",
+      "widgetId": "arcgis-scene",
+      "actionName": "feature-select",
+      "config": {
+        "targetLayerId": "163fc7c7e7f-layer-0"
+      }
+    }, {
+      "description": "feature view",
+      "widgetId": "feature-info",
+      "actionName": "feature-info"
+    }]
+  }]
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+		<title>builder</title>
+		<!-- <link rel="shortcut icon" href="images/shortcut.ico"> -->
+		<style>
+		</style>
+	</head>
+	<body>
+		<div id="loading">
+		</div>
+		<div id="app">
+
+		</div>
+
+		<script>
+			var arcgisApiUrl = 'https://js.arcgis.com/4.7/';
+			var env = 'production';
+		</script>
+		<script type="text/javascript" src="pubsub.js"></script>
+		<script type="text/javascript" src="init.js"></script>
+		<script type="text/javascript" src="../jimu-core/dojo.js"></script>
+		<script type="text/javascript" src="../jimu-core/vendors.js"></script>
+		<script>
+			window.amdRequire = window.require;
+			var initFiles = ['index.js'];
+			window.amdRequire(initFiles, function() {
+				console.log('app loaded.');
+			});
+		</script>
+		<!-- <script type="text/javascript" src="../service-worker-registration.js"></script> -->
+	</body>
+</html>

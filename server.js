@@ -9,16 +9,20 @@ const http = require('http'),
 const app = express();
 
 // use hbs view engine, but attach it to .html
-app.set('views', './')
+app.set('views', './apps/exb/stemapp')
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
+// static assets that need to be served one level up from the exb
+app.use('/', express.static('apps/exb'))
+app.use('/js', express.static('apps/exb'))
 
-// Only have one route...
-app.get('/', function(req, res){
-  console.info(`appId: ${req.query.appId}`);
+// now the route to handle the exb index file...
+app.get('/exb', function(req, res){
+  console.info(`id: ${req.query.id}`);
+
   // TODO: set the env in a config file
   let reqOpts = {
-    portal: 'https://qaext.arcgis.com/sharing/rest'
+    portal: 'https://www.arcgis.com/sharing/rest'
   };
   // if there is an appId ...
   if (req.query.appId) {

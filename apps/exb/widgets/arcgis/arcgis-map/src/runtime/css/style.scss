@@ -1,0 +1,34 @@
+.widget-map{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .overview-container{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    z-index: 1;
+  }
+
+  .extent-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .extent-btn-container{
+    button{
+      outline: none;
+    }
+    .previous-extent-btn{
+      color: #111;
+    }
+    .next-extent-btn{
+      color: #222;
+    }
+  }
+}
