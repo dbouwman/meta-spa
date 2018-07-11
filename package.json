@@ -4,6 +4,7 @@
   "description": "Node server that injects meta headers into index.html of your SPA, but otherwise serves it unchanged",
   "main": "server.js",
   "scripts": {
+    "start": "server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
