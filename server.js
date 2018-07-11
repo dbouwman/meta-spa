@@ -15,7 +15,7 @@ app.engine('html', require('hbs').__express);
 // static assets that need to be served one level up from the exb
 // app.use('/assets', express.static('apps/exb/assets'))
 app.use('/', express.static('apps/exb'))
-// app.use('/js', express.static('apps/exb'))
+app.use('/js', express.static('apps/exb'))
 
 app.get('/', function(req, res) {
   res.redirect(301, 'https://radar-app.now.sh/exb?id=8261ae335d2044eb9837cb858847c692');
