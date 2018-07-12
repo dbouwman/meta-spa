@@ -1,0 +1,18 @@
+{
+  "name": "builder-entry",
+  "version": "0.0.1",
+  "jimuVersion": "0.0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "This is the widget used in developer guide",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasMainClass": false,
+    "hasLocale": false,
+    "hasConfig": false
+  },
+  "extentions": [{
+    "point": "APP_CONFIG_PROCESSOR",
+    "uri": "extensions/builder-entry"
+  }]
+}

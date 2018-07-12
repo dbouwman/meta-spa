@@ -1,0 +1,11 @@
+.widget-menu {
+    height: 100%;
+    width: 100%;
+    .nav {
+        justify-content: flex-end;
+    }
+    .jimu-link {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+}

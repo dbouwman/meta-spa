@@ -1,0 +1,65 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "page-default-layout",
+      "background": "#eee",
+      "widgets": [
+        "demo1"
+      ]
+    }
+  },
+  "widgets": {
+    "demo1": {
+      "id": "demo1",
+      "uri": "widgets/common/demo/",
+      "icon": "/widgets/common/demo/assets/icon.png",
+      "label": "demo",
+      "config": {
+        "p1": "abc",
+        "p2": "123"
+      },
+      "version": "0.0.1"
+    }
+  },
+  "layouts": {
+    "page-default-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false,
+          "heightInPixel": false,
+          "widthInPixel": false
+        }
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 20,
+          "w": 928,
+          "h": 496
+        },
+        "id": "2",
+        "setting": {
+          "active": false,
+          "className": "auto"
+        },
+        "type": "widget",
+        "widgetId": "demo1"
+      }
+    }
+  },
+  "skin": "demo",
+  "attributes": {
+    "title": "test"
+  }
+}

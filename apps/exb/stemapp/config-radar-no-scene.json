@@ -1,0 +1,1597 @@
+{
+  "hub": {
+    "community": {
+      "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    }
+  },
+  "skin": "radar",
+  "attributes": {
+    "title": "Radar Experience"
+  },
+
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "main page",
+      "layout": "main-page-layout",
+      "mobileLayout": "main-page-layout-mobile",
+      "widgets": [
+        "arcgis-map"
+      ],
+      "sections": [
+        "sidebar-section"
+      ],
+      "sharedArea": {
+        "header": true
+      }
+    },
+    "detail-page": {
+      "id": "detail-page",
+      "label": "detail page",
+      "layout": "detail-page-layout",
+      "mobileLayout": "detail-page-layout-mobile",
+      "widgets": [
+        "arcgis-map-overview",
+        "feature-info-large",
+        "feature-info-large2",
+        "feature-info3",
+        "details-page_related-features",
+        "details-page_view-map-link",
+        "approved-comments"
+      ],
+      "sections": [],
+      "sharedArea": {
+        "header": true
+      }
+    }
+  },
+
+  "sharedArea": {
+    "header": {
+      "widgets": [
+        "header-title-text",
+        "user-menu"
+      ]
+    },
+    "footer": {},
+    "leftArea": {},
+    "rightArea": {},
+    "layout": "app-layout"
+  },
+
+  "sections": {
+    "sidebar-section": {
+      "id": "sidebar-section",
+      "views": [
+        "main-view",
+        "list-view",
+        "details-view"
+      ]
+    }
+  },
+
+  "views": {
+    "main-view": {
+      "id": "main-view",
+      "label": "main view",
+      "layout": "main-view-layout",
+      "mobileLayoutCompact": "main-view-compact-layout",
+      "mobileTheresholdSize": {
+        "height": 300
+      },
+      "widgets": [
+        "main-image",
+        "main-text-title",
+        "main-text-description",
+        "feature-list-main",
+        "main-view-places-link"
+      ]
+    },
+    "list-view": {
+      "id": "list-view",
+      "label": "list view",
+      "layout": "list-view-layout",
+      "widgets": [
+        "list-view-link", "feature-list"
+      ]
+    },
+    "details-view": {
+      "id": "details-view",
+      "label": "details view",
+      "layout": "details-view-layout",
+      "mobileLayoutCompact": "details-view-compact-layout",
+      "mobileTheresholdSize": {
+        "height": 300
+      },
+      "widgets": [
+        "detail-view-link", "feature-info", "feature-info2", "approved-comments", "detail-comment-link", "detail-view-more-link"
+      ]
+    }
+  },
+
+  "layouts": {
+    "main-page-layout": {
+      "1": {
+        "id": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "sidebar",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "2": {
+        "id": "2",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 400
+        },
+        "setting": {
+          "attach": "left",
+          "togglable": true,
+          "resizable": false,
+          "max": 400
+        },
+        "type": "section",
+        "sectionId": "sidebar-section"
+      },
+      "3": {
+        "id": "3",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0
+        },
+        "type": "widget",
+        "widgetId": "arcgis-map"
+      }
+    },
+    "main-page-layout-mobile": {
+      "1": {
+        "id": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "sidebar",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "2": {
+        "id": "2",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 400,
+          "h": 120
+        },
+        "setting": {
+          "attach": "bottom",
+          "togglable": false,
+          "resizable": true,
+          "overlay": true,
+          "min": 120
+        },
+        "type": "section",
+        "sectionId": "sidebar-section"
+      },
+      "3": {
+        "id": "3",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 50,
+          "h": 80
+        },
+        "type": "widget",
+        "widgetId": "arcgis-map"
+      }
+    },
+    "detail-page-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 100,
+          "y": 10,
+          "w": 800,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": true,
+          "heightInPixel": false,
+          "xyInPixel": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 10,
+          "y": 0,
+          "w": 55
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "xyInPixel": false,
+          "padding": [30, 0]
+        }
+      },
+      "2": {
+        "id": "2",
+        "parentId": "0",
+        "pos": {
+          "x": 65,
+          "y": 0,
+          "w": 25
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": true,
+          "xyInPixel": false
+        }
+      },
+
+
+
+
+      "3": {
+        "id": "3",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 12
+        },
+        "type": "widget",
+        "widgetId": "feature-info-large",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "4": {
+        "id": "4",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 12,
+          "w": 2,
+          "h": 1.5
+        },
+        "type": "widget",
+        "widgetId": "details-page_view-map-link",
+        "setting": {
+          "widthInPixel": true,
+          "heightInPixel": true
+        }
+      },
+      "5": {
+        "parentId": "1",
+        "pos": {
+          "x": 2,
+          "y": 12,
+          "w": 2,
+          "h": 1.5
+        },
+        "id": "5",
+        "type": "widget",
+        "widgetId": "details-page_view-comments"
+      },
+      "6": {
+        "id": "6",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 100,
+          "h": 6
+        },
+        "type": "widget",
+        "widgetId": "feature-info-large2",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "7": {
+        "id": "7",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 18.5,
+          "w": 100,
+          "h": 7.5
+        },
+        "type": "widget",
+        "widgetId": "details-page_highlighted-features",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "8": {
+        "id": "8",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 100,
+          "h": 16
+        },
+        "type": "widget",
+        "widgetId": "approved-comments",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+
+
+      "9": {
+        "id": "9",
+        "parentId": "2",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 240
+        },
+        "type": "widget",
+        "widgetId": "arcgis-map-overview",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": true
+        }
+      },
+      "10": {
+        "parentId": "2",
+        "pos": {
+          "x": 0,
+          "y": 240,
+          "w": 100,
+          "h": 160
+        },
+        "id": "10",
+        "type": "widget",
+        "widgetId": "feature-info3",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "11": {
+        "id": "11",
+        "parentId": "2",
+        "pos": {
+          "x": 0,
+          "y": 435,
+          "w": 100,
+          "h": 540
+        },
+        "type": "widget",
+        "widgetId": "details-page_related-features",
+        "setting": {
+          "widthInPixel": false
+        }
+      }
+
+
+
+    },
+    "detail-page-layout-mobile": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 100,
+          "y": 10,
+          "w": 800,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": true,
+          "heightInPixel": false,
+          "xyInPixel": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "xyInPixel": false,
+          "padding": [20, 20]
+        }
+      },
+      "2": {
+        "id": "2",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 7
+        },
+        "type": "widget",
+        "widgetId": "feature-info-mobile",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "3": {
+        "id": "3",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 7,
+          "w": 1,
+          "h": 1.5
+        },
+        "type": "widget",
+        "widgetId": "details-page_view-map-link",
+        "setting": {
+          "widthInPixel": true,
+          "heightInPixel": true
+        }
+      },
+      "4": {
+        "id": "4",
+        "parentId": "1",
+        "pos": {
+          "x": 1,
+          "y": 12,
+          "w": 1,
+          "h": 1.5
+        },
+        "type": "widget",
+        "widgetId": "details-page_view-comments"
+      },
+      "5": {
+        "id": "5",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 100,
+          "h": 4
+        },
+        "type": "widget",
+        "widgetId": "feature-info-mobile2"
+      },
+      "6": {
+        "id": "6",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 18.5,
+          "w": 100,
+          "h": 2
+        },
+        "type": "widget",
+        "widgetId": "arcgis-map-overview"
+      },
+      "7": {
+        "id": "7",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 20,
+          "w": 100,
+          "h": 4.5
+        },
+        "type": "widget",
+        "widgetId": "feature-info3",
+        "setting": {
+          "widthInPixel": false
+        }
+      },
+      "8": {
+        "id": "8",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 25.5,
+          "w": 100,
+          "h": 8
+        },
+        "type": "widget",
+        "widgetId": "details-page_highlighted-features"
+      },
+      "9": {
+        "id": "9",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 34,
+          "w": 100,
+          "h": 16
+        },
+        "type": "widget",
+        "widgetId": "details-page_related-features"
+      },
+      "10": {
+        "id": "10",
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 50,
+          "w": 100,
+          "h": 10
+        },
+        "type": "widget",
+        "widgetId": "approved-comments"
+      }
+
+    },
+    "main-view-layout": {
+      "0": {
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "id": "0",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        },
+        "type": "fixed"
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "padding": [20, 0],
+          "className": "scrollable"
+        }
+      },
+      "2": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 6
+        },
+        "id": "2",
+        "type": "widget",
+        "widgetId": "main-image"
+      },
+      "3": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 12,
+          "h": 1
+        },
+        "id": "3",
+        "type": "widget",
+        "widgetId": "main-text-title"
+      },
+      "4": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 12,
+          "h": 3.5
+        },
+        "id": "4",
+        "type": "widget",
+        "widgetId": "main-text-description"
+      },
+      "5": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 12,
+          "h": 12
+        },
+        "id": "5",
+        "type": "widget",
+        "widgetId": "feature-list-main"
+      },
+      "6": {
+        "parentId": "0",
+        "pos": {
+          "w": null,
+          "h": 68,
+          "x": 0,
+          "y": 0.01
+        },
+        "id": "6",
+        "type": "widget",
+        "widgetId": "main-view-places-link",
+        "setting": {
+          "vPriority": "bottom",
+          "className": "p-3 action-bar"
+        }
+      }
+    },
+    "main-view-compact-layout": {
+      "1": {
+        "id": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "2": {
+        "parentId": "1",
+        "pos": {
+          "x": 20,
+          "y": 15
+        },
+        "id": "2",
+        "type": "widget",
+        "widgetId": "main-text-title"
+      },
+      "3": {
+        "parentId": "1",
+        "pos": {
+          "w": null,
+          "h": 82,
+          "x": 0,
+          "y": 0.01
+        },
+        "id": "3",
+        "type": "widget",
+        "widgetId": "main-view-places-link",
+        "setting": {
+          "vPriority": "bottom",
+          "className": "p-4"
+        }
+      }
+
+    },
+    "list-view-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "className": "scrollable"
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 50,
+          "w": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "padding": [20, 0]
+        }
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "h": 40
+        },
+        "id": "2",
+        "type": "widget",
+        "widgetId": "list-view-link"
+      },
+      "3": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12
+        },
+        "id": "3",
+        "type": "widget",
+        "widgetId": "feature-list"
+      }
+    },
+    "details-view-layout": {
+      "0": {
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "id": "0",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false
+        },
+        "type": "fixed"
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "padding": [0, 0],
+          "className": "scrollable"
+        }
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 10,
+          "y": 10,
+          "w": 100,
+          "h": 50
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "detail-view-link"
+      },
+      "3": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 9
+        },
+        "id": "3",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-info"
+      },
+      "4": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 12,
+          "h": 5
+        },
+        "id": "4",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-info2"
+      },
+      "5": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "w": 12,
+          "h": 8
+        },
+        "id": "5",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "approved-comments"
+      },
+      
+
+      "6": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0.01,
+          "w": null,
+          "h": 68
+        },
+        "id": "6",
+        "setting": {
+          "vPriority": "bottom",
+          "className": "action-bar"
+        },
+        "type": "fixed"
+      },
+      "7": {
+        "parentId": "6",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null
+        },
+        "id": "7",
+        "type": "grid",
+        "setting": {
+          "padding": [15, 15]
+        }
+      },
+      "8": {
+        "parentId": "7",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "id": "8",
+        "setting": {
+          "widthInPixel": false,
+          "xyInPixel": false
+        },
+        "type": "widget",
+        "widgetId": "detail-comment-link"
+      },
+      "9": {
+        "parentId": "7",
+        "pos": {
+          "x": 1,
+          "y": 0,
+          "w": 1,
+          "h": 1
+        },
+        "id": "9",
+        "setting": {
+          "widthInPixel": false,
+          "xyInPixel": false
+        },
+        "type": "widget",
+        "widgetId": "detail-view-more-link"
+      }
+
+    },
+    "details-view-compact-layout": {
+      "0": {
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 80
+        },
+        "id": "0",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": true
+        },
+        "type": "fixed"
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "h": 100
+        },
+        "type": "grid",
+        "setting": {
+          "widthInPixel": false,
+          "heightInPixel": false,
+          "padding": [0, 0]
+        }
+      },
+      "2": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 12,
+          "h": 5
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "feature-info"
+      }
+
+    },
+    "app-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": null,
+          "h": 100
+        },
+        "type": "sidebar",
+        "setting": {
+          "active": false,
+          "widthInPixel": false,
+          "heightInPixel": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 60
+        },
+        "type": "fixed",
+        "setting": {
+          "active": true,
+          "attach": "top",
+          "togglable": false,
+          "resizable": false
+        }
+      },
+      "2": {
+        "parentId": "1",
+        "pos": {
+          "x": 20,
+          "y": 15,
+          "w": 40,
+          "h": 30
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "header-logo"
+      },
+     
+      "3": {
+        "parentId": "1",
+        "pos": {
+          "x": 80,
+          "y": 10,
+          "w": 200,
+          "h": 40
+        },
+        "id": "3",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "header-title-text"
+      },
+      "4": {
+        "parentId": "1",
+        "pos": {
+          "x": 20,
+          "y": 10,
+          "w": 150,
+          "h": 40
+        },
+        "id": "4",
+        "setting": {
+          "active": false,
+          "hPriority": "right"
+        },
+        "type": "widget",
+        "widgetId": "user-menu"
+      },
+      "5": {
+        "id": "5",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "h": 50
+        },
+        "type": "fixed",
+        "setting": {
+          "attach": "bottom",
+          "togglable": false
+        }
+      },
+      "6": {
+        "id": "6",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 50
+        },
+        "type": "fixed",
+        "setting": {
+          "attach": "left",
+          "togglable": false
+        }
+      },
+      "7": {
+        "id": "7",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 50
+        },
+        "type": "fixed",
+        "setting": {
+          "attach": "right",
+          "togglable": false
+        }
+      }
+    }
+  },
+
+  "widgets": {
+    "main-view-places-link": {
+      "id": "main-view-places-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "View Places",
+        "style": "button",
+        "color": "primary",
+        "width": "100%",
+        "goto": {
+          "views": [
+            "list-view"
+          ]
+        }
+      }
+    },
+    "detail-comment-link": {
+      "id": "detail-comment-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "Comment",
+        "style": "button",
+        "color": "primary",
+        "width": "100%",
+        "goto": {}
+      }
+    },
+    "detail-view-more-link": {
+      "id": "detail-view-more-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "More Info",
+        "style": "button_outline",
+        "color": "primary",
+        "width": "100%",
+        "goto": {
+          "page": "detail-page"
+        }
+      }
+    },
+    "detail-view-link": {
+      "id": "detail-view-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "Back",
+        "style": "button",
+        "color": "light",
+        "icon": {
+          "name": "left"
+        },
+        "className": "btn-sm",
+        "goto": {
+          "views": [
+            "list-view"
+          ]
+        }
+      }
+    },
+    "list-view-link": {
+      "id": "list-view-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "Back",
+        "style": "button",
+        "color": "link",
+        "className": "text-secondary",
+        "icon": {
+          "name": "left"
+        },
+        "goto": {
+          "views": [
+            "main-view"
+          ]
+        }
+      }
+    },
+    "details-page_view-map-link": {
+      "id": "details-page_view-map-link",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "View Map",
+        "style": "button",
+        "color": "primary",
+        "width": "100%",
+        "goto": {
+          "page": "default",
+          "views": [
+            "details-view"
+          ]
+        }
+      }
+    },
+    "details-page_view-comments": {
+      "id": "details-page_view-comments",
+      "uri": "widgets/common/link/",
+      "config": {
+        "name": "Comments",
+        "style": "button_outline",
+        "color": "primary",
+        "width": "100%",
+        "goto": {}
+      }
+    },
+
+    "arcgis-scene": {
+      "id": "arcgis-scene",
+      "uri": "widgets/arcgis/arcgis-scene/",
+      "outputDataSources": ["arcgis-scene"],
+      "config": {
+        "websceneId": "24913e3cf7314311ba9f9d90ccc66388",
+        "canZoom": false,
+        "canGoHome": false,
+        "canLocate": false,
+        "canNavigate": false,
+        "canCompass": false,
+        "disablePopup": true
+      }
+    },
+    "arcgis-map-overview": {
+      "id": "arcgis-map-overview",
+      "uri": "widgets/arcgis/arcgis-map/",
+      "outputDataSources": ["arcgis-map"],
+      "config": {
+        "webmapId": "aedb8657cf6c414e91728c73b3743253",
+        "canZoom": false,
+        "canGoHome": false,
+        "canLocate": false,
+        "canNavigate": false,
+        "canCompass": false,
+        "disablePopup": true,
+        "excludeUnselected": true,
+        "centerAt": {
+          "target": "selected",
+          "zoom": 17
+        }
+      }
+    },
+    "arcgis-map": {
+      "id": "arcgis-map",
+      "uri": "widgets/arcgis/arcgis-map/",
+      "outputDataSources": ["arcgis-map"],
+      "config": {
+        "webmapId": "aedb8657cf6c414e91728c73b3743253",
+        "canZoom": true,
+        "canScale": true,
+        "canGoHome": true,
+        "canGoExtent": true,
+        "canOverviewMap": false,
+        "canLocate": true,
+        "disablePopup": true,
+        "centerAt": {
+          "target": "selected",
+          "zoom": 17
+        },
+        "ui": {
+          "padding": {
+            "left": 30,
+            "top": 6
+          }
+        }
+      }
+    },
+    "feature-list-main": {
+      "id": "feature-list-main",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "TEXT_FOR_DESCRIPTION"
+        },
+        "image": {
+          "field": "THUMB_URL"
+        },
+        "limit": 3,
+        "header": {
+          "title": {
+            "text": "Featured Places"
+          }
+        },
+        "onItemSelect": {
+          "goto": {
+            "views": [
+              "details-view"
+            ]
+          }
+        }
+      }
+    },
+    "feature-list": {
+      "id": "feature-list",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "TEXT_FOR_DESCRIPTION"
+        },
+        "image": {
+          "field": "THUMB_URL"
+        },
+        "highlightSelection": false,
+        "onItemSelect": {
+          "goto": {
+            "views": [
+              "details-view"
+            ]
+          }
+        }
+      }
+    },
+    "details-page_highlighted-features": {
+      "id": "details-page_highlighted-features",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "horizontal": true,
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "TEXT_FOR_DESCRIPTION"
+        },
+        "image": {
+          "field": "THUMB_URL",
+          "shape": "rectangle",
+          "height": 140
+        },
+        "limit": 5,
+        "header": {
+          "title": {
+            "text": "Features Highlighted"
+          }
+        },
+        "cardWidth": 240
+      }
+    },
+    "details-page_related-features": {
+      "id": "details-page_related-features",
+      "uri": "widgets/arcgis/feature-list/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "style": {
+          "name": "style2"
+        },
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "TEXT_FOR_DESCRIPTION"
+        },
+        "limit": 5,
+        "header": {
+          "title": {
+            "text": "Related Featured"
+          }
+        },
+        "onItemSelect": {
+          "goto": {
+            "page": "default",
+            "views":[
+              "details-view"
+            ]
+          }
+        }
+      }
+    },
+    "feature-info": {
+      "id": "feature-info",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "image": {
+          "field": "PIC_URL",
+          "height": 225
+        },
+        "title": {
+          "field": "NAME"
+        },
+        "description": {
+          "field": "DESCRIPTION",
+          "limit": 150
+        }
+      }
+    },
+    "feature-info2": {
+      "id": "feature-info2",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "description": {
+          "type": "list",
+          "fields": [{
+            "icon": {
+              "name": "map-pin"
+            },
+            "field": "ADDRESS"
+          }, {
+            "icon": {
+              "name": "phone"
+            },
+            "field": "PHONE"
+          }, {
+            "icon": {
+              "name": "link"
+            },
+            "field": "WEBSITE"
+          }]
+        }
+      }
+    },
+    "feature-info3": {
+      "id": "feature-info3",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "style": {
+          "name": "style2"
+        },
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "description": {
+          "type": "list",
+          "fields": [{
+            "icon": {
+              "name": "map-pin"
+            },
+            "field": "ADDRESS"
+          }, {
+            "icon": {
+              "name": "phone"
+            },
+            "field": "PHONE"
+          }, {
+            "icon": {
+              "name": "link"
+            },
+            "field": "WEBSITE"
+          }]
+        }
+      }
+    },
+    "feature-info-mobile": {
+      "id": "feature-info-mobile",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "image": {
+          "field": "PIC_URL",
+          "height": 225
+        },
+        "title": {
+          "field": "NAME"
+        }
+      }
+    },
+    "feature-info-mobile2": {
+      "id": "feature-info-mobile2",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "description": {
+          "field": "DESCRIPTION",
+          "limit": 150
+        }
+      }
+    },
+    "feature-info-large": {
+      "id": "feature-info-large",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "image": {
+          "field": "PIC_URL",
+          "height": 425
+        },
+        "title": {
+          "field": "NAME"
+        }
+      }
+    },
+    "feature-info-large2": {
+      "id": "feature-info-large2",
+      "uri": "widgets/arcgis/feature-info/",
+      "useDataSources": ["arcgis-map"],
+      "config": {
+        "dataSourceId": "arcgis-map",
+        "layerId": "PalmSpringsPlaces_3720",
+        "description": {
+          "field": "DESCRIPTION",
+          "richText": true
+        }
+      }
+    },
+    "approved-comments": {
+      "id": "approved-comments",
+      "uri": "widgets/hub/annotations",
+      "useDataSources": [
+        "approved-comments-ds"
+      ],
+      "config": {
+        "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
+        "status": "approved",
+        "targetDataSourceId": "arcgis-map",
+        "header": {
+          "title": {
+            "text": "Comments"
+          }
+        }
+      }
+    },
+    "header-logo": {
+      "id": "header-logo",
+      "uri": "widgets/common/image/",
+      "config": {
+        "src": "assets/img/Logo.svg",
+        "alt": "Radar Experience",
+        "height": 30,
+        "width": 37
+      }
+    },
+    "header-title-text": {
+      "id": "header-title-text",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "<h5>Radar <span style='font-weight: normal;'>Experience</span></h5>"
+      }
+    },
+    "user-menu": {
+      "id": "user-menu",
+      "uri": "widgets/common/user-menu",
+      "config": {
+        "hub": true
+      }
+    },
+    "main-image": {
+      "id": "main-image",
+      "uri": "widgets/common/image/",
+      "config": {
+        "src": "http://www.rowanpalmsprings.com/images/1700-960/palm-springs-sign-ddc63cf9.jpg",
+        "alt": "test image",
+        "cover": true,
+        "height": 240,
+        "className": "radar-main--image_demo-only"
+      }
+    },
+    "main-image-small": {
+      "id": "main-image-small",
+      "uri": "widgets/common/image/",
+      "config": {
+        "src": "http://www.rowanpalmsprings.com/images/1700-960/palm-springs-sign-ddc63cf9.jpg",
+        "alt": "test image",
+        "cover": true,
+        "height": 60,
+        "width": 60,
+        "className": "radar-main--image_demo-only"
+      }
+    },
+    "main-text-title": {
+      "id": "main-text-title",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "<h4>Welcome to Palm Springs</h4>"
+      }
+    },
+    "main-text-description": {
+      "id": "main-text-description",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "<span style='color: #333'>Palm Springs, California, is an American Shangri-La in a unique desert environment with endless sun, rediscovered mid-century architecture and a fun, relaxed atmosphere.</span>"
+      }
+    },
+    "text-detail-title": {
+      "id": "text-detail-title",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "this is the detail page"
+      }
+    }
+  },
+
+  "dataSources": {
+    "ds-1": {
+      "id": "ds-1",
+      "label": "ds 1",
+      "type": "WEB_SCENE",
+      "itemId": "24913e3cf7314311ba9f9d90ccc66388"
+    },
+    "ds-2": {
+      "id": "ds-2",
+      "label": "test web map",
+      "type": "WEB_MAP",
+      "itemId": "aedb8657cf6c414e91728c73b3743253"
+    },
+    "arcgis-scene": {
+      "id": "arcgis-scene",
+      "label": "test arcgis scene output datasource",
+      "type": "WEB_SCENE_VIEW"
+    },
+    "arcgis-map": {
+      "id": "arcgis-map",
+      "label": "test arcgis map output datasource",
+      "type": "WEB_MAP_VIEW"
+    },
+    "feature-layer": {
+      "id": "fl1",
+      "label": "test feature layer data source",
+      "type": "FEATURE_LAYER",
+      "url": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0"
+    },
+    "approved-comments-ds": {
+      "id": "approved-comments-ds",
+      "label": "Approved Comments Data Source",
+      "type": "HUB_ANNOTATIONS",
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+    }
+  }
+}

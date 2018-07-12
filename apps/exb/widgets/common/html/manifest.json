@@ -1,0 +1,14 @@
+{
+  "name": "html",
+  "type": "widget",
+  "platforms": ["web", "mobile"],
+  "version": "0.0.1",
+  "jimuVersion": "0.0.1",
+  "author": "Esri R&D Center D.C.",
+  "description": "This is the widget to display HTML.",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "hasSettingPage": false
+  }
+}

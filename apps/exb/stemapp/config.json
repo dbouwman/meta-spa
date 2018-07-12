@@ -1,0 +1,432 @@
+{
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "page-default-layout",
+      "background": "#eee",
+      "sharedArea": {
+        "header": true
+      },
+      "widgets": [
+        "navigator1",
+        "text1",
+        "demo1",
+        "image1",
+        "html1"
+      ],
+      "sections": [
+        "section1"
+      ]
+    },
+    "page2": {
+      "id": "page2",
+      "label": "page 2",
+      "layout": "page-2-layout",
+      "sharedArea": {
+        "header": true
+      },
+      "widgets": [
+        "text4"
+      ]
+    }
+  },
+  "sections": {
+    "section1": {
+      "id": "section1",
+      "views": [
+        "default",
+        "view2"
+      ]
+    }
+  },
+  "views": {
+    "default": {
+      "id": "default",
+      "label": "default",
+      "layout": "layout2",
+      "widgets": [
+        "text2"
+      ]
+    },
+    "view2": {
+      "id": "view2",
+      "label": "view2",
+      "layout": "layout3",
+      "widgets": [
+        "text3"
+      ]
+    }
+  },
+  "widgets": {
+    "text1": {
+      "id": "text1",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "<p><strong>text1</strong><em>text1</em>.</p>"
+      },
+      "icon": "/widgets/common/text/assets/icon.png",
+      "label": "text",
+      "version": "0.0.1"
+    },
+    "text2": {
+      "id": "text2",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "text2..in default view"
+      },
+      "icon": "/widgets/common/text/assets/icon.png",
+      "label": "text",
+      "version": "0.0.1"
+    },
+    "text3": {
+      "id": "text3",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "text3..in view 2"
+      },
+      "icon": "/widgets/common/text/assets/icon.png",
+      "label": "text",
+      "version": "0.0.1"
+    },
+    "text4": {
+      "id": "text4",
+      "uri": "widgets/common/text/",
+      "config": {
+        "text": "text4..in page 2"
+      },
+      "icon": "/widgets/common/text/assets/icon.png",
+      "label": "text",
+      "version": "0.0.1"
+    },
+    "demo1": {
+      "id": "demo1",
+      "uri": "widgets/common/demo/",
+      "icon": "/widgets/common/demo/assets/icon.png",
+      "label": "demo",
+      "config": {
+        "p1": "abc",
+        "p2": "123"
+      },
+      "version": "0.0.1"
+    },
+    "html1": {
+      "id": "html1",
+      "uri": "widgets/common/html/",
+      "config": {
+        "html": "<h2>h2</h2><p><strong>Strong</strong> <em>em</em>.</p>"
+      },
+      "icon": "/widgets/common/html/assets/icon.png",
+      "label": "html",
+      "version": "0.0.1"
+    },
+    "image1": {
+      "id": "image1",
+      "uri": "widgets/common/image/",
+      "config": {
+        "src": "https://www.esri.com/content/dam/esrisites/home/uc-2018-agenda.jpg",
+        "alt": "test image",
+        "type": "fluid",
+        "transparency": 0.65
+      },
+      "icon": "/widgets/common/image/assets/icon.png",
+      "label": "image",
+      "version": "0.0.1"
+    },
+    "menu1": {
+      "id": "menu1",
+      "uri": "widgets/common/menu/",
+      "config": {},
+      "icon": "/widgets/common/menu/assets/icon.png",
+      "label": "menu",
+      "version": "0.0.1"
+    },
+    "navigator1": {
+      "id": "navigator1",
+      "uri": "widgets/common/navigator/",
+      "config": {
+        "links": [
+          {
+            "name": "navigator1",
+            "views": [
+              "view2"
+            ]
+          },
+          {
+            "name": "navigator2",
+            "views": [
+              "default"
+            ]
+          }
+        ]
+      },
+      "icon": "/widgets/common/navigator/assets/icon.png",
+      "label": "Navigator",
+      "version": "0.0.1"
+    }
+  },
+  "layouts": {
+    "page-default-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false,
+          "restrict": true,
+          "heightInPixel": false,
+          "widthInPixel": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 608,
+          "y": 192,
+          "w": 304,
+          "h": 304
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "image1"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 672,
+          "w": 928,
+          "h": 496
+        },
+        "id": "2",
+        "setting": {
+          "active": false,
+          "className": "auto"
+        },
+        "type": "widget",
+        "widgetId": "demo1"
+      },
+      "3": {
+        "parentId": "0",
+        "pos": {
+          "x": 480,
+          "y": 16,
+          "w": 208,
+          "h": 64
+        },
+        "id": "3",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text1"
+      },
+      "5": {
+        "parentId": "0",
+        "pos": {
+          "x": 32,
+          "y": 96,
+          "w": 496,
+          "h": 496
+        },
+        "id": "5",
+        "setting": {
+          "active": true
+        },
+        "type": "section",
+        "sectionId": "section1"
+      },
+      "6": {
+        "parentId": "0",
+        "pos": {
+          "x": 48,
+          "y": 32,
+          "w": 208,
+          "h": 32
+        },
+        "id": "6",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "navigator1"
+      },
+      "7": {
+        "parentId": "0",
+        "pos": {
+          "x": 720,
+          "y": 16,
+          "w": 96,
+          "h": 64
+        },
+        "id": "7",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "html1"
+      }
+    },
+    "layout2": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 53,
+          "y": 5,
+          "w": 200,
+          "h": 22
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text2"
+      }
+    },
+    "layout3": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 53,
+          "y": 5,
+          "w": 100,
+          "h": 22
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text3"
+      }
+    },
+    "page-2-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 100,
+          "w": 300,
+          "h": 50
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "text4"
+      }
+    },
+    "shared-area-layout": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 200,
+          "y": 0,
+          "w": 1000,
+          "h": 1500
+        },
+        "type": "sidebar",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "id": "1",
+        "parentId": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 1000,
+          "h": 50
+        },
+        "type": "fixed",
+        "setting": {
+          "active": true,
+          "attach": "top",
+          "togglable": false,
+          "style": {
+            "backgroundColor": "red"
+          }
+        }
+      },
+      "2": {
+        "parentId": "1",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 100,
+          "h": 100
+        },
+        "id": "2",
+        "setting": {
+          "active": false,
+          "widthInPixel": false,
+          "heightInPixel": false
+        },
+        "type": "widget",
+        "widgetId": "menu1"
+      }
+    }
+  },
+  "sharedArea": {
+    "header": {
+      "widgets": [
+        "menu1"
+      ]
+    },
+    "layout": "shared-area-layout"
+  },
+  "skin": "demo",
+  "attributes": {
+    "title": "stemapp"
+  }
+}

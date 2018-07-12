@@ -9,21 +9,30 @@ const http = require('http'),
 const app = express();
 
 // use hbs view engine, but attach it to .html
-app.set('views', './')
+app.set('views', './apps/exb/stemapp')
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
+// static assets that need to be served one level up from the exb
+app.use('/', express.static('apps/exb'));
+app.use('/js', express.static('apps/exb'));
 
-// Only have one route...
-app.get('/', function(req, res){
-  console.info(`appId: ${req.query.appId}`);
+app.get('/', function(req, res) {
+  res.render('root');
+  // res.redirect(301, 'https://radar-app.now.sh/exb?id=8261ae335d2044eb9837cb858847c692');
+})
+
+// now the route to handle the exb index file...
+app.get('/exb', function(req, res){
+  console.info(`id: ${req.query.id}`);
+
   // TODO: set the env in a config file
   let reqOpts = {
-    portal: 'https://qaext.arcgis.com/sharing/rest'
+    portal: 'https://www.arcgis.com/sharing/rest'
   };
   // if there is an appId ...
-  if (req.query.appId) {
+  if (req.query.id) {
     // fetch the item...
-    Items.getItem(req.query.appId, reqOpts)
+    Items.getItem(req.query.id, reqOpts)
     .then((item) => {
       // construct the url to the thumbnail
       item.thumbnailImageUrl = `${reqOpts.portal}/content/items/${item.id}/info/${item.thumbnail}`;
@@ -35,8 +44,7 @@ app.get('/', function(req, res){
     })
   } else {
     // just return the template...
-    console.info('No appid passed.');
-    res.render('index');
+    res.redirect(301, 'https://radar-app.now.sh/exb?id=8261ae335d2044eb9837cb858847c692');
 
   }
 });

@@ -1,0 +1,17 @@
+.feature-info {
+  height: 100%; /* TODO: remove after UC demo */
+  overflow: auto; /* TODO: remove after UC demo */
+  .card {
+    border: 0;
+    .card-title {
+      text-align: left;
+    }
+  }
+}
+
+.fixed-layout {
+  .feature-view {
+    background-color: white;
+  }
+
+}

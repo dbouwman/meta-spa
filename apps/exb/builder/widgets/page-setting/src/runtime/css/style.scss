@@ -1,0 +1,41 @@
+@import './page-setting-collapse.scss';
+.widget-builder-page-setting{
+  >section{
+    padding: 20px 0 0 20px;
+  }
+  .page-setting-name{
+    label{
+      font-weight: bolder;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+    input#page-name{
+      width: 180px;
+      height: 30px;
+      margin-left: 40px;
+      display: inline-block;
+    }
+  }
+  .page-background{
+    width: 258px;
+    display: flex;
+    justify-content: space-between;
+    .color-picker-1{
+      height: 30px;
+      width: 100px;
+    }
+  }
+
+  .page-setting-display-mode{
+    .page-setting-display-mode-title{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .page-setting-display-mode-group{
+      >div{
+        margin-left: 20px;
+        width: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "hub": {
+    "community": {
+      "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    }
+  },
+  "attributes": {
+    "portalUrl": "https://cityx.maps.arcgis.com/sharing/rest"
+  },
+  "pages": {
+    "default": {
+      "id": "default",
+      "label": "page 1",
+      "layout": "layout1",
+      "widgets": [
+        "userMenu",
+        "pending-comments",
+        "approved-comments"
+      ]
+    }
+  },
+  "widgets": {
+    "userMenu" : {
+      "id": "userMenu",
+      "uri": "widgets/common/user-menu/",
+      "config": {
+        "hub": true
+      }
+    },
+    "pending-comments": {
+      "id": "pending-comments",
+      "uri": "widgets/hub/annotations",
+      "useDataSources": [
+        "pending-comments-ds"
+      ],
+      "config": {
+        "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
+        "status": "pending"
+      }
+    },
+    "approved-comments": {
+      "id": "approved-comments",
+      "uri": "widgets/hub/annotations",
+      "useDataSources": [
+        "approved-comments-ds"
+      ],
+      "config": {
+        "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
+        "status": "approved"
+      }
+    }
+  },
+  "layouts": {
+    "layout1": {
+      "0": {
+        "id": "0",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "w": 640,
+          "h": 640
+        },
+        "type": "fixed",
+        "setting": {
+          "active": false
+        }
+      },
+      "1": {
+        "parentId": "0",
+        "pos": {
+          "x": 530,
+          "y": 0,
+          "w": 90,
+          "h": 42
+        },
+        "id": "1",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "userMenu"
+      },
+      "2": {
+        "parentId": "0",
+        "pos": {
+          "x": 10,
+          "y": 52,
+          "w": 300,
+          "h": 575
+        },
+        "id": "2",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "pending-comments"
+      },
+      "3": {
+        "parentId": "0",
+        "pos": {
+          "x": 320,
+          "y": 52,
+          "w": 300,
+          "h": 575
+        },
+        "id": "3",
+        "setting": {
+          "active": false
+        },
+        "type": "widget",
+        "widgetId": "approved-comments"
+      }
+    }
+  },
+  "dataSources": {
+    "pending-comments-ds": {
+      "id": "pending-comments-ds",
+      "label": "pending Comments Data Source",
+      "type": "HUB_ANNOTATIONS",
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+    },
+    "approved-comments-ds": {
+      "id": "approved-comments-ds",
+      "label": "Approved Comments Data Source",
+      "type": "HUB_ANNOTATIONS",
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+    }
+  },
+  "skin": "demo"
+}

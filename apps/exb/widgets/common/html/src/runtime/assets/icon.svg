@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="17px" viewBox="0 0 30 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/html</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="builder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.7">
+        <g id="spec" transform="translate(-1304.000000, -610.000000)" fill="#010002" fill-rule="nonzero">
+            <g id="icons/html" transform="translate(1304.000000, 610.000000)">
+                <path d="M9.17421471,14.5065209 L0,9.5032008 L0,6.73204771 L9.17421471,1.75705765 L9.17421471,5.01196819 L2.78147117,8.0828827 L9.17421471,11.2696223 C9.17421471,11.2696223 9.17421471,14.5065209 9.17421471,14.5065209 Z" id="Shape"></path>
+                <polygon id="Shape" points="10.7411928 16.257495 16.8252286 0.00477137177 18.7473161 0.00477137177 12.6491451 16.257495"></polygon>
+                <polygon id="Shape" points="20.8057455 14.5065209 20.8057455 11.2696223 27.1972366 8.10864811 20.8057455 4.97206759 20.8057455 1.75574553 29.9799602 6.73717694 29.9799602 9.49163022"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

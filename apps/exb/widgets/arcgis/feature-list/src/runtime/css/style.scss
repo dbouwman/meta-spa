@@ -1,0 +1,34 @@
+$default-font-size: 0.875rem !default;
+$text-line-height: 1.5 !default;
+$text-line-clamp: 3 !default; // number of lines to show
+
+.feature-list {
+  // height: 100%;
+  // overflow: auto;
+  font-size: $default-font-size;
+  .card-body {
+    // padding: 0.5rem 1rem;
+    overflow: hidden;
+  }
+  h5.card-title {
+    font-size: 1rem;
+  }
+  .card-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card-text {
+    max-height: $default-font-size * $text-line-height * $text-line-clamp;
+    overflow: hidden;
+    line-height: $text-line-height;
+    -webkit-line-clamp: $text-line-clamp;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  &.horizontal {
+    height: auto;
+    width: 100%;
+  }
+}

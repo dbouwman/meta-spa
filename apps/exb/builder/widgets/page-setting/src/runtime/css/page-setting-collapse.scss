@@ -1,0 +1,46 @@
+.widget-builder-component-page-setting-collapse{
+  .setting-title{
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >div{
+      font-weight: bolder;
+      display: inline-block;
+      width: 170px;
+    }
+    input{
+      display: inline-block;
+    }
+  }
+  .setting-line{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    label{
+      margin-left: 20px;
+      width: 80px;
+    }
+    input.setting-line-input{
+      width: 100px;
+      height: 25px;
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 37px;
+    }
+    input[type="checkbox"]{
+      margin-left: 38px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .color-picker-1{
+      display: inline-block;
+      width: 100px;
+      height: 25px;
+      margin-left: 37px;
+    }
+  }
+}

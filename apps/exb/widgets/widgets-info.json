@@ -1,0 +1,80 @@
+[
+  {
+    "name": "arcgis-map",
+    "label": "Map",
+    "path": "widgets/arcgis/arcgis-map",
+    "icon": "widgets/arcgis/arcgis-map/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "arcgis-scene",
+    "label": "Scene",
+    "path": "widgets/arcgis/arcgis-scene",
+    "icon": "widgets/arcgis/arcgis-scene/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "feature-info",
+    "label": "feature info",
+    "path": "widgets/arcgis/feature-info",
+    "icon": "widgets/arcgis/feature-info/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "feature-list",
+    "label": "feature list",
+    "path": "widgets/arcgis/feature-list",
+    "icon": "widgets/arcgis/feature-list/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "demo",
+    "label": "demo",
+    "path": "widgets/common/demo",
+    "icon": "widgets/common/demo/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "html",
+    "label": "html",
+    "path": "widgets/common/html",
+    "icon": "widgets/common/html/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "image",
+    "label": "image",
+    "path": "widgets/common/image",
+    "icon": "widgets/common/image/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "link",
+    "label": "link",
+    "path": "widgets/common/link",
+    "icon": "widgets/common/link/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "menu",
+    "label": "menu",
+    "path": "widgets/common/menu",
+    "icon": "widgets/common/menu/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "navigator",
+    "label": "navigator",
+    "path": "widgets/common/navigator",
+    "icon": "widgets/common/navigator/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "text",
+    "label": "text",
+    "path": "widgets/common/text",
+    "icon": "widgets/common/text/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "user-menu",
+    "label": "user menu",
+    "path": "widgets/common/user-menu",
+    "icon": "widgets/common/user-menu/dist/runtime/assets/icon.svg"
+  },
+  {
+    "name": "annotations",
+    "label": "annotations",
+    "path": "widgets/hub/annotations",
+    "icon": "widgets/hub/annotations/dist/runtime/assets/icon.svg"
+  }
+]
