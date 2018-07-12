@@ -17,7 +17,8 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, {}>{
       user,
       onSignIn,
       onSignOut,
-      className
+      className,
+      config
     } = this.props;
 
     // merge CSS class names
@@ -26,6 +27,8 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, {}>{
       className
     );
 
-    return <div className={classes}><UserMenu user={user} onSignIn={onSignIn} onSignOut={onSignOut} /></div>;
+    // NOTE: I had to add the check for config only for the tests
+    // it seems like that should be added by the test widget wrapper
+    return <div className={classes}><UserMenu user={user} useHub={config && config.hub} onSignIn={onSignIn} onSignOut={onSignOut} /></div>;
   }
 }

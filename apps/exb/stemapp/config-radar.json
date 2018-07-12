@@ -1,8 +1,13 @@
 {
+  "hub": {
+    "community": {
+      "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    }
+  },
   "skin": "radar",
   "attributes": {
     "title": "Radar Experience",
-    "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    "portalUrl": "https://cityx.maps.arcgis.com/sharing/rest"
   },
 
   "pages": {
@@ -240,7 +245,8 @@
         "setting": {
           "widthInPixel": false,
           "heightInPixel": true,
-          "xyInPixel": false
+          "xyInPixel": false,
+          "gridSize": 5
         }
       },
 
@@ -357,7 +363,7 @@
           "x": 0,
           "y": 240,
           "w": 100,
-          "h": 160
+          "h": 165
         },
         "id": "10",
         "type": "widget",
@@ -778,7 +784,7 @@
           "x": 0,
           "y": 0,
           "w": 12,
-          "h": 9
+          "h": 10
         },
         "id": "3",
         "setting": {
@@ -815,7 +821,7 @@
         "type": "widget",
         "widgetId": "approved-comments"
       },
-      
+
 
       "6": {
         "parentId": "0",
@@ -974,7 +980,7 @@
         "type": "widget",
         "widgetId": "header-logo"
       },
-     
+
       "3": {
         "parentId": "1",
         "pos": {
@@ -1504,7 +1510,10 @@
     },
     "user-menu": {
       "id": "user-menu",
-      "uri": "widgets/common/user-menu"
+      "uri": "widgets/common/user-menu",
+      "config": {
+        "hub": true
+      }
     },
     "main-image": {
       "id": "main-image",
@@ -1585,7 +1594,7 @@
       "id": "approved-comments-ds",
       "label": "Approved Comments Data Source",
       "type": "HUB_ANNOTATIONS",
-      "url": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
     }
   }
 }

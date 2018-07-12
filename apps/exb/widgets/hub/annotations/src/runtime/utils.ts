@@ -17,6 +17,7 @@ export function getThumbnailUrl(portalUrl?: string, user?: IMUser , token?: stri
     const url = `${portalUrl}/community/users/${user.username}/info/${user.thumbnail}`;
     return token ? `${url}?token=${token}` : url;
   } else {
+    // NOTE: default profile image is 150x150
     return 'https://cdn-a.arcgis.com/cdn/18397E9/js/arcgisonline/css/images/no-user-thumb.jpg';
   }
 }

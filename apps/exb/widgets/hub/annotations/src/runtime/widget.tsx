@@ -1,17 +1,19 @@
 import {React} from 'jimu-core';
 
 import {BaseWidget, AllWidgetProps, DataSourceStatus} from 'jimu-core';
+import { ImageProps } from 'jimu-ui';
 import { IQueryFeaturesRequestOptions } from '@esri/arcgis-rest-feature-service';
 import {IMConfig} from '../config';
 import { buildWhereClause, getThumbnailUrl } from './utils';
 import { HubAnnotation } from './HubAnnotation';
 import { HubAnnotationForm } from './HubAnnotationForm';
-// TODO: import this from 'jimu-hub' once we create that extension
+// TODO: import these from 'jimu-hub' once we create that extension
 import { HubAnnotationsDataSource } from 'jimu-core/lib/data-source-manager';
-import { ImageProps } from 'jimu-ui';
+import { HubSignInModal } from 'jimu-ui/lib/components/hub-sign-in-modal';
 
 import './css/style.scss';
 
+// TODO: move this a util and add tests
 const getFeatureIdFromProps = (props) => {
   const config = props.config;
   const targetDsId = config.targetDataSourceId;
@@ -33,12 +35,22 @@ const getFeatureIdFromProps = (props) => {
   return feature_id;
 }
 
-export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, {}>{
+export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, { modalOpen: boolean }>{
 
   constructor(props){
     super(props);
 
+    this.state = {
+      modalOpen: false
+    };
     this.onAddAnnotation = this.onAddAnnotation.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+  }
+
+  toggleModal() {
+    this.setState(prevState => ({
+      modalOpen: !prevState.modalOpen
+    }));
   }
 
   _query(ds) {
@@ -109,7 +121,10 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, {}>{
       addComment = (<HubAnnotationForm thumbnailProps={thumbnailProps} onSave={this.onAddAnnotation} />);
     } else {
       // show a sign in message
-      addComment = (<p>You must be <a onClick={this.props.onSignIn}>signed in</a> to add a comment</p>);
+      addComment = (<div>
+        <p>You must be <a onClick={this.toggleModal}>signed in</a> to add a comment</p>
+        <HubSignInModal title="Sign in" isOpen={this.state.modalOpen} toggle={this.toggleModal} onSignIn={this.props.onSignIn}></HubSignInModal>
+      </div>);
     }
 
     // we have a loaded data source, get the records
@@ -122,7 +137,7 @@ export default class Widget extends BaseWidget<AllWidgetProps<IMConfig>, {}>{
     records.reduce((annotations, r, i) => {
       const data = r.getData();
       if (!filterByFeature || data.feature_id === feature_id) {
-        annotations.push(<HubAnnotation data={data} key={i} />);
+        annotations.push(<HubAnnotation data={data} portalUrl={this.props.portalUrl} token={this.props.token} key={i} />);
       }
       return annotations;
     }, annotations);

@@ -240,7 +240,8 @@
         "setting": {
           "widthInPixel": false,
           "heightInPixel": true,
-          "xyInPixel": false
+          "xyInPixel": false,
+          "gridSize": 5
         }
       },
 
@@ -357,7 +358,7 @@
           "x": 0,
           "y": 240,
           "w": 100,
-          "h": 160
+          "h": 165
         },
         "id": "10",
         "type": "widget",
@@ -778,7 +779,7 @@
           "x": 0,
           "y": 0,
           "w": 12,
-          "h": 9
+          "h": 10
         },
         "id": "3",
         "setting": {
@@ -815,7 +816,7 @@
         "type": "widget",
         "widgetId": "approved-comments"
       },
-      
+
 
       "6": {
         "parentId": "0",
@@ -974,7 +975,7 @@
         "type": "widget",
         "widgetId": "header-logo"
       },
-     
+
       "3": {
         "parentId": "1",
         "pos": {
@@ -1477,6 +1478,7 @@
       "config": {
         "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
         "status": "approved",
+        "targetDataSourceId": "arcgis-scene",
         "header": {
           "title": {
             "text": "Comments"

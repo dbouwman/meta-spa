@@ -14,6 +14,7 @@ export class HubAnnotationForm extends React.PureComponent<{thumbnailProps?: Ima
     this.onInput = this.onInput.bind(this);
     this.onClick = this.onClick.bind(this);
     this.onDismiss = this.onDismiss.bind(this);
+    this.onImageError = this.onImageError.bind(this);
   }
 
   // capture the description as it changes
@@ -44,6 +45,15 @@ export class HubAnnotationForm extends React.PureComponent<{thumbnailProps?: Ima
     });
   }
 
+  // TODO: remove this once we are using the session portal instead of the app's portal
+  onImageError(e) {
+    const defaultSrc = 'https://cdn-a.arcgis.com/cdn/18397E9/js/arcgisonline/css/images/no-user-thumb.jpg';
+    const target = e.target;
+    if (target.src !== defaultSrc) {
+      target.src = defaultSrc;
+    }
+  }
+
   render(){
     const {
       thumbnailProps
@@ -62,7 +72,8 @@ export class HubAnnotationForm extends React.PureComponent<{thumbnailProps?: Ima
         alt={thumbnailProps.alt}
         title={thumbnailProps.title}
         shape='circle'
-        width='32' />
+        width='32'
+        onError={this.onImageError} />
       <CardBody className="d-flex flex-column">
         <Form>
           <FormGroup>

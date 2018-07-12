@@ -1,8 +1,12 @@
 {
+  "hub": {
+    "community": {
+      "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    }
+  },
   "skin": "radar",
   "attributes": {
-    "title": "Radar Experience",
-    "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    "title": "Radar Experience"
   },
 
   "pages": {
@@ -1503,7 +1507,10 @@
     },
     "user-menu": {
       "id": "user-menu",
-      "uri": "widgets/common/user-menu"
+      "uri": "widgets/common/user-menu",
+      "config": {
+        "hub": true
+      }
     },
     "main-image": {
       "id": "main-image",
@@ -1584,7 +1591,7 @@
       "id": "approved-comments-ds",
       "label": "Approved Comments Data Source",
       "type": "HUB_ANNOTATIONS",
-      "url": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
     }
   }
 }

@@ -426,7 +426,7 @@
       }
     }
   },
-  "skin": "builder",
+  "skin": "builder-dark",
   "attributes": {
     "title": "builder"
   }

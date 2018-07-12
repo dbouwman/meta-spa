@@ -7,48 +7,7 @@ Imaging with any questions regarding Web Fonts:  http://www.fonts.com
 
 @font-face {
   font-family: "Avenir Next W00";
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_400.eot?#iefix");
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_400.eot?#iefix") format("eot"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_400.woff2") format("woff2"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_400.woff") format("woff"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_400.ttf") format("truetype"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_400.svg") format("svg");
+  src: url("/skins/builder-dark/assets/fonts/avenir-next/Avenir_Next.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir Next W00";
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.eot?#iefix");
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.eot?#iefix") format("eot"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.woff2") format("woff2"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.woff") format("woff"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.ttf") format("truetype"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_400.svg") format("svg");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Avenir Next W00";
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_600.eot?#iefix");
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_600.eot?#iefix") format("eot"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_600.woff2") format("woff2"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_600.woff") format("woff"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_600.ttf") format("truetype"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_600.svg") format("svg");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Avenir Next W00";
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.eot?#iefix");
-  src: url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.eot?#iefix") format("eot"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.woff2") format("woff2"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.woff") format("woff"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.ttf") format("truetype"),
-    url("assets/fonts/avenir-next/Avenir_Next_W00_Italic_600.svg") format("svg");
-  font-weight: 600;
-  font-style: italic;
 }

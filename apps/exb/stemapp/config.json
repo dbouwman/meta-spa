@@ -178,6 +178,7 @@
         "type": "fixed",
         "setting": {
           "active": false,
+          "restrict": true,
           "heightInPixel": false,
           "widthInPixel": false
         }

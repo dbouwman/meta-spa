@@ -1,6 +1,11 @@
 {
+  "hub": {
+    "community": {
+      "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    }
+  },
   "attributes": {
-    "portalUrl": "https://cityxcommunity.maps.arcgis.com/sharing/rest"
+    "portalUrl": "https://cityx.maps.arcgis.com/sharing/rest"
   },
   "pages": {
     "default": {
@@ -10,14 +15,17 @@
       "widgets": [
         "userMenu",
         "pending-comments",
-        "removed-comments"
+        "approved-comments"
       ]
     }
   },
   "widgets": {
     "userMenu" : {
       "id": "userMenu",
-      "uri": "widgets/common/user-menu/"
+      "uri": "widgets/common/user-menu/",
+      "config": {
+        "hub": true
+      }
     },
     "pending-comments": {
       "id": "pending-comments",
@@ -26,19 +34,19 @@
         "pending-comments-ds"
       ],
       "config": {
-        "target": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/DC_bikeshare_locations/FeatureServer/0",
+        "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
         "status": "pending"
       }
     },
-    "removed-comments": {
-      "id": "removed-comments",
+    "approved-comments": {
+      "id": "approved-comments",
       "uri": "widgets/hub/annotations",
       "useDataSources": [
-        "removed-comments-ds"
+        "approved-comments-ds"
       ],
       "config": {
-        "target": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/DC_bikeshare_locations/FeatureServer/0",
-        "status": "removed"
+        "target": "https://servicesqa.arcgis.com/97KLIFOSt5CxbiRI/ArcGIS/rest/services/PalmSpringsPlaces/FeatureServer/0",
+        "status": "approved"
       }
     }
   },
@@ -100,7 +108,7 @@
           "active": false
         },
         "type": "widget",
-        "widgetId": "removed-comments"
+        "widgetId": "approved-comments"
       }
     }
   },
@@ -109,13 +117,13 @@
       "id": "pending-comments-ds",
       "label": "pending Comments Data Source",
       "type": "HUB_ANNOTATIONS",
-      "url": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
     },
-    "removed-comments-ds": {
-      "id": "removed-comments-ds",
-      "label": "Removed Comments Data Source",
+    "approved-comments-ds": {
+      "id": "approved-comments-ds",
+      "label": "Approved Comments Data Source",
       "type": "HUB_ANNOTATIONS",
-      "url": "https://services.arcgis.com/bkrWlSKcjUDFDtgw/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
+      "url": "https://services7.arcgis.com/BBpPn9wZu2D6eTNY/arcgis/rest/services/Hub%20Annotations/FeatureServer/0"
     }
   },
   "skin": "demo"
